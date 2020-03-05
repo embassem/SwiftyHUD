@@ -11,6 +11,7 @@
 		F75F68E223FAB7B600BE7244 /* SwiftyHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F68E123FAB7B600BE7244 /* SwiftyHUDTests.swift */; };
 		F75F68E423FAB7B600BE7244 /* SwiftyHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F75F68D623FAB7B500BE7244 /* SwiftyHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F75F68F123FAB89600BE7244 /* SwiftyHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F68EF23FAB89600BE7244 /* SwiftyHUD.swift */; };
+		F75F692023FACAB200BE7244 /* StaticAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F691F23FACAB200BE7244 /* StaticAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		F75F68E123FAB7B600BE7244 /* SwiftyHUDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyHUDTests.swift; sourceTree = "<group>"; };
 		F75F68E323FAB7B600BE7244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F75F68EF23FAB89600BE7244 /* SwiftyHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyHUD.swift; sourceTree = "<group>"; };
+		F75F691F23FACAB200BE7244 /* StaticAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,7 @@
 		F75F68C923FAB7B500BE7244 = {
 			isa = PBXGroup;
 			children = (
-				F75F68D523FAB7B500BE7244 /* SwiftyHUD */,
+				F75F68ED23FAB89600BE7244 /* Sources */,
 				F75F68E023FAB7B600BE7244 /* SwiftyHUDTests */,
 				F75F68D423FAB7B500BE7244 /* Products */,
 			);
@@ -70,16 +72,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F75F68D523FAB7B500BE7244 /* SwiftyHUD */ = {
-			isa = PBXGroup;
-			children = (
-				F75F68ED23FAB89600BE7244 /* Source */,
-				F75F68D623FAB7B500BE7244 /* SwiftyHUD.h */,
-				F75F68D723FAB7B500BE7244 /* Info.plist */,
-			);
-			path = SwiftyHUD;
-			sourceTree = "<group>";
-		};
 		F75F68E023FAB7B600BE7244 /* SwiftyHUDTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +81,47 @@
 			path = SwiftyHUDTests;
 			sourceTree = "<group>";
 		};
-		F75F68ED23FAB89600BE7244 /* Source */ = {
+		F75F68ED23FAB89600BE7244 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F792A8C72403CA0E00C39A49 /* Core */,
+				F792A8C92403CC7200C39A49 /* Lottie */,
+				F792A8CA2403CC8200C39A49 /* NVActivityIndicator */,
+				F792A8C82403CA6E00C39A49 /* SupportingFiles */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F792A8C72403CA0E00C39A49 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				F75F68EF23FAB89600BE7244 /* SwiftyHUD.swift */,
+				F75F691F23FACAB200BE7244 /* StaticAPI.swift */,
 			);
-			path = Source;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F792A8C82403CA6E00C39A49 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F75F68D623FAB7B500BE7244 /* SwiftyHUD.h */,
+				F75F68D723FAB7B500BE7244 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F792A8C92403CC7200C39A49 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		F792A8CA2403CC8200C39A49 /* NVActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NVActivityIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75F692023FACAB200BE7244 /* StaticAPI.swift in Sources */,
 				F75F68F123FAB89600BE7244 /* SwiftyHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +406,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftyHUD/Info.plist;
+				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,7 +431,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftyHUD/Info.plist;
+				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
